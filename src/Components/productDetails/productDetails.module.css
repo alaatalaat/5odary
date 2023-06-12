@@ -1,0 +1,13 @@
+.divContainImg{justify-content:center;align-items:center;
+    display:inline-flex;flex-direction:column;height:400px;
+}
+.Icon{display:flex;justify-content: end;}
+.Icon span{color: rgba(17,17,17,.5);margin:0px 5px;
+    padding: 0;background-color: #f1f1f1;width: 30px;height: 30px;
+    display: flex;justify-content: center;align-items: center;border-radius: 50%;font-size: 16px;}
+.Icon span:nth-of-type(2){color:red;background:transparent;}
+    .price{color:#03AD53;line-height:40px;}
+.button,.button:hover,.button:focus{background:#03AD53;width:100%;color:#fff;}
+.divPosition{position:relative;height:400px;}
+.button{position:absolute;bottom:20px;}
+.img:hover{transform:scale(1.5,1.5);}

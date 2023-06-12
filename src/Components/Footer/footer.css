@@ -1,0 +1,8 @@
+#footer{background: #F2FCF5;}
+#footer ul{padding:0px;margin-top:5px;}
+#footer ul li{list-style-type:none;padding:7px 0px;}
+#footer ul li a{text-decoration:none;color:#000;}
+#footer .row:nth-child(2) div a{margin-left:10px;}
+#footer .row:nth-child(2) a.btn{background:#03AD53;color:#fff;width:135px;}
+#lastFooter{background:#e5f7ed;font-weight:600;color:#03AD53;}
+#lastFooter .row div{margin:7px 0px;}

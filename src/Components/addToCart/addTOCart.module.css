@@ -1,0 +1,5 @@
+.prodName{margin-bottom:5px;}
+.price{color:#03AD53;}
+.totalPrice{justify-content:space-between;background-color:#03AD53;display:flex;
+color:#fff;position:absolute;bottom:0px;width:376px;padding:10px;}
+.row{border:1px solid #eee;}

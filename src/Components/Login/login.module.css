@@ -1,0 +1,10 @@
+.form{max-width:400px;margin:auto;}
+.submit,.submit:focus,.signupInCard,.signupInCard:hover,.signupInCard:focus{
+    background:#03AD53;color:#fff;border:1px solid #03AD53;}
+.input,.submit:focus{box-shadow:none !important;outline:none !important;}
+.divsInRow{margin:120px 0px;} 
+.spanInCard{font-size:14px;}
+.cardContainer{background:#f8f8fa;border:none;}
+::marker {color:#03AD53;}
+.signupInCard{width:150px;}
+.signupInCard a{text-decoration:none;color:#fff;}

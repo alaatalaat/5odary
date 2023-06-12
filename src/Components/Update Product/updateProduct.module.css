@@ -1,0 +1,5 @@
+.form{background:#F2FCF5;border-radius:5px;}
+.form label{font-weight:bold;}
+.form div{margin:10px 0px;}
+.saveBtn.saveBtn{background:#03AD53;color:#fff;border:none;margin:auto;}
+.containSave{text-align:center;margin:30px !important;}

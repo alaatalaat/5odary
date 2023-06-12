@@ -1,0 +1,8 @@
+.cardstyle{margin:5px 0px 20px 0px;}
+.button,.button:hover,.button:focus{background:#03AD53;width:100%;color:#fff;}
+.loveIcon span{color: rgba(17,17,17,.5);
+    padding: 0;background-color: #f1f1f1;width: 30px;height: 30px;
+    display: flex;justify-content: center;align-items: center;border-radius: 50%;font-size: 16px;}
+.loveIcon{display:flex;justify-content: end;}
+a:hover{color:#000;}
+.price{color:#03AD53;font-weight:600;}

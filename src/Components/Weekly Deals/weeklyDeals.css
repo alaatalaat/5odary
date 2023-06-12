@@ -1,0 +1,17 @@
+h3+span a{text-decoration:none;color:#03AD53;font-weight:bold;}
+#weeklyDeals .col-md-3 div>div:first-child{direction:ltr;}
+#weeklyDeals .col-md-3 div div:first-child span{color: rgba(17,17,17,.5);
+    padding: 0;background-color: #f1f1f1;width: 30px;height: 30px;
+    display: flex;justify-content: center;align-items: center;border-radius: 50%;font-size: 16px;}
+#weeklyDeals .col-md-3 div div:nth-child(2){text-align:center;}
+#weeklyDeals .col-md-3 div p{overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;}
+#weeklyDeals .col-md-3 div span{color:#03AD53;font-weight:600;}
+#weeklyDeals .col-md-3 div button{background:#03AD53;color:#fff;padding:7px 0px;border:none;}
+
+h4.subscribe{max-width:400px;font-size:21px;text-align:center;margin:auto}
+h4.subscribe+div{border: 2px solid #03AD53;background: #F2FCF5;border-radius:4px;}
+h4.subscribe+div input,h4.subscribe+div button{padding: 7px 0px;border:none;}
+h4.subscribe+div input{width:80%;outline:none;box-shadow:none;}
+h4.subscribe+div button{background:#03AD53;color:#fff;width:20%;border-top-right-radius:4px;border-bottom-right-radius:4px;}
