@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 import style from "../Update Product/updateProduct.module.css";
-import { useParams } from "react-router-dom";
+import { useParams ,Link ,useNavigate} from "react-router-dom";
 import { useState  ,useEffect } from "react";
 import axios from "axios" ;
 
 export default function UpdateProduct(props){
+    const history = useNavigate();
     const param = useParams();
     
     const [prod,setProd] = useState({
@@ -42,9 +43,11 @@ export default function UpdateProduct(props){
                 size_ar: prod.size_ar,
                 size_en: prod.size_en,
                 kind: prod.kind
-        }).then(
-           setProd({...prod,price:0})
-        )
+        }
+        ).then(
+           setProd({...prod,price:0,})   
+        ).then(history(-1));
+       
     }
 
     

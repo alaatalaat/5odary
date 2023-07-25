@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link ,useNavigate} from "react-router-dom";
 import { useState ,useEffect } from "react";
-import { useSelector , useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { INCREAMENT ,CART} from "../../Store/actions";
 import axios from 'axios';
 
@@ -23,12 +23,25 @@ export default function DynamicComp(props) {
  
   const [products,setProd] = useState([]);
   products.forEach((el) => (el.love = false));
+  const [eProducts,setEProducts]= useState([]);
 
   useEffect(()=>{
     axios.get("http://localhost:8080/Products").then((res)=>{
       setProd(res.data);
     })
+
+    // const getAllProducts = async () => {
+    //   try {
+    //     const response = await axios.get('https://api.systemha.com/e-commerce/product/all?limit=20' )
+    //     console.log('Get Successfully:', response) 
+    //   } catch (error) {
+    //     console.error('Errorrr :', error)
+    //   }
+    // }
+    // getAllProducts()
   },[]);
+
+
   const nav = useNavigate();
   const gotoProdDetails = (id,e)=>{
         nav(props.prod+"/"+id);

@@ -1,7 +1,7 @@
 import offers from "../../assets/offers.jpg";
 import "../Home/home.css";
 import { useTranslation } from "react-i18next";
-import { Link ,useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom";
 import offerIcon from "../../assets/offer-icon.png";
 import vegetables from "../../assets/vegetables.png";
 import kitchen from "../../assets/kitchen.png";
@@ -10,41 +10,12 @@ import detergents from "../../assets/detergents.png";
 import discount from "../../assets/discount.png";
 import { useEffect, useState } from "react";
 import DynamicComp from "../Dynamic Component In Home/DynamicComp";
-import Footer from "../Footer/footer";
-import axios from 'axios';
 
 
 export default function Home() {
   const [like, setLike] = useState(false);
-  // function onLikeBtnClick(index) {
-  //   weeklyProd[index].love = !weeklyProd[index].love;
-  //   console.log("love", weeklyProd[index].love);
-
-  //   let icon = document.getElementById(index);
-  //   icon.classList.toggle("fa-solid");
-  //   icon.classList.toggle("fa-regular");
-  // }
 
   const [t, i18n] = useTranslation();
-
-  
-
-  // const [weeklyProd,setWeekProd] = useState([]);
-  // useEffect(()=>{
-  //   axios.get("http://localhost:8080/weeklyProd").then((res)=>{
-  //     setWeekProd(res.data);
-  //   })
-  // },[]);
-  // const nav = useNavigate();
-  // const gotoProdDetails = (id,e)=>{
-  //       nav("http://localhost:8080/weeklyProd/"+id);
-  //       e.preventDefault();
-  //       e.stopPropagation();
-  // }
-  
-
-  //weeklyProd.forEach((el) => (el.love = false));
-
   var bestSelling = [
     {
       id: "1",
@@ -269,7 +240,7 @@ export default function Home() {
         <h3 className="mt-5">{t("Popular Categories")}</h3>
         <div className="row mx-0 pt-2" id="popularCat">
           <div className="col-md my-2 my-md-0">
-            <Link to="weekly-deals">
+            <Link to="#">
               <div className="py-2 rounded">
                 <img src={offerIcon} width="70px" />
                 <p className="mt-3">{t("weeklyDeals")}</p>
@@ -277,7 +248,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="col-md my-2 my-md-0">
-            <Link to="fruits&vegetables">
+            <Link to="#">
               <div className="py-2 rounded">
                 <img src={vegetables} width="70px" />
                 <p className="mt-3">{t("Fr&Ve")}</p>
@@ -285,7 +256,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="col-md my-2 my-md-0">
-            <Link to="khodarChicken">
+            <Link to="#">
               <div className="py-2 rounded">
                 <img src={kitchen} width="70px" />
                 <p className="mt-3">{t("khodarCh")}</p>
@@ -293,7 +264,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="col-md my-2 my-md-0">
-            <Link to="grocery">
+            <Link to="#">
               <div className="py-2 rounded">
                 <img src={grocery} width="70px" />
                 <p className="mt-3">{t("grocery")}</p>
@@ -301,7 +272,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="col-md my-2 my-md-0">
-            <Link to="detergents">
+            <Link to="#">
               <div className="py-2 rounded">
                 <img src={detergents} width="70px" />
                 <p className="mt-3">{t("detergents")}</p>

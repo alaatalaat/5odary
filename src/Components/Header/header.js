@@ -91,11 +91,6 @@ export default function Header(props) {
                     <Dropdown.Toggle id="dropdown-basic">
                       {t("signInUp")} <i className="fa-solid fa-chevron-down"></i>
                     </Dropdown.Toggle>
-
-                    <Dropdown.Menu>
-                      <Dropdown.Item href="/login">{t('signin')}</Dropdown.Item>
-                      <Dropdown.Item href="/register">{t('signup')}</Dropdown.Item>
-                    </Dropdown.Menu>
                   </Dropdown>
                 </div>
                 <div>
@@ -112,65 +107,33 @@ export default function Header(props) {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav>
                   <Nav.Link>
-                    <Link to="/weekly-deals">{t("weeklyDeals")}</Link>
+                    <Link to="#">{t("weeklyDeals")}</Link>
                   </Nav.Link>
 
                   <Dropdown>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                       {t("Fr&Ve")} <i className="fa-solid fa-chevron-down"></i>
                     </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item>
-                        <Link to="fruits&vegetables/fresh-vegetables">{t('freshVe')}</Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link to="fruits&vegetables/fresh-fruits">{t("freshFr")}</Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link to="fruits&vegetables/fresh-herbs&leaves">{t('fresh&leaves')}</Link>
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
                   </Dropdown>
 
                   <Dropdown>
                     <Dropdown.Toggle id="dropdown-basic">
                       {t('khodarCh')} <i className="fa-solid fa-chevron-down"></i>
                     </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item>
-                        <Link to="khodarKitchen/salads">{t('salads')}</Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link to="khodarKitchen/readyVegetables">{t('readyVe')}</Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link to="khodarKitchen/khodarTable">{t('khodarT')}</Link>
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
                   </Dropdown>
 
                   <Dropdown>
                     <Dropdown.Toggle variant="success" id="dropdown-basic">
                       {t('grocery')} <i className="fa-solid fa-chevron-down"></i>
                     </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                      <Dropdown.Item>
-                        <Link to="/grocery/bevarage">{t("bevarage")}</Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link to="/grocery/grains&legumes">{t("grains&legumes")}</Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link to="/grocery/spices&mixes">{t("spices&mixes")}</Link>
-                      </Dropdown.Item>
-                      <Dropdown.Item>
-                        <Link to="/grocery/honey&jams">{t("honey&jams")}</Link>
-                      </Dropdown.Item>
-                    </Dropdown.Menu>
                   </Dropdown>
 
-                  <Nav.Link href="#link">
-                    <Link to="/detergents">{t('detergents')}</Link></Nav.Link>
+
+                  <Dropdown>
+                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                      {t('detergents')} <i className="fa-solid fa-chevron-down"></i>
+                    </Dropdown.Toggle>
+                  </Dropdown>
                 </Nav>
               </Navbar.Collapse>
             </Navbar>
@@ -225,7 +188,7 @@ export default function Header(props) {
         <div>
           <ul>
             <li>
-              <Link to="/weekly-deals">{t("weeklyDeals")}</Link>
+              <Link to="#">{t("weeklyDeals")}</Link>
             </li>
             <li>
               <Accordion eventKey="0">
@@ -238,19 +201,6 @@ export default function Header(props) {
                       <i className="fa-solid fa-chevron-up mx-1"></i>
                     )}
                   </Accordion.Header>
-                  <Accordion.Body>
-                    <ul>
-                      <li>
-                        <Link to="fruits&vegetables/fresh-vegetables">{t('freshVe')}</Link>
-                      </li>
-                      <li>
-                        <Link to="fruits&vegetables/fresh-fruits">{t("freshFr")}</Link>
-                      </li>
-                      <li>
-                        <Link to="fruits&vegetables/fresh-herbs&leaves">{t('fresh&leaves')}</Link>
-                      </li>
-                    </ul>
-                  </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
             </li>
@@ -265,19 +215,6 @@ export default function Header(props) {
                       <i className="fa-solid fa-chevron-up mx-1"></i>
                     )}
                   </Accordion.Header>
-                  <Accordion.Body>
-                    <ul>
-                      <li>
-                        <Link to="khodarKitchen/salads">{t('salads')}</Link>
-                      </li>
-                      <li>
-                        <Link to="khodarKitchen/readyVegetables">{t('readyVe')}</Link>
-                      </li>
-                      <li>
-                        <Link to="khodarKitchen/khodarTable">{t('khodarT')}</Link>
-                      </li>
-                    </ul>
-                  </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
             </li>
@@ -292,27 +229,18 @@ export default function Header(props) {
                       <i className="fa-solid fa-chevron-up mx-1"></i>
                     )}
                   </Accordion.Header>
-                  <Accordion.Body>
-                    <ul>
-                      <li>
-                        <Link to="/grocery/bevarage">{t("bevarage")}</Link>
-                      </li>
-                      <li>
-                        <Link to="/grocery/grains&legumes">{t("grains&legumes")}</Link>
-                      </li>
-                      <li>
-                        <Link to="/grocery/spices&mixes">{t("spices&mixes")}</Link>
-                      </li>
-                      <li>
-                        <Link to="/grocery/honey&jams">{t("honey&jams")}</Link>
-                      </li>
-                    </ul>
-                  </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
             </li>
             <li>
-              <Link to="/detergents">{t('detergents')}</Link>
+              <Accordion.Header>
+                    {t('detergents')}
+                    {btn1?.classList.contains("collapsed") ? (
+                      <i className="fa-solid fa-chevron-down mx-1"></i>
+                    ) : (
+                      <i className="fa-solid fa-chevron-up mx-1"></i>
+                    )}
+                  </Accordion.Header>
             </li>
           </ul>
         </div>

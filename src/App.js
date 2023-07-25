@@ -25,10 +25,46 @@ import store from "../src/Store/store";
 import { Provider } from "react-redux";
 import ProductDetails from "./Components/productDetails/productDetails";
 import UpdateProduct from "./Components/Update Product/updateProduct";
-import KhodarKitchen from "./Components/Khodar Chicken/Khodar kitchen";
+import { useState ,useEffect } from "react";
+import axios from "axios";
+import Cookies from 'universal-cookie';
 
 
 function App() {
+  const cookies = new Cookies();
+  useEffect(()=>{
+    const getTalentID = async () => {
+      try {
+        const response = await axios.post(
+          'http://systemha-backend-env.eba-f9cmsdh3.us-east-1.elasticbeanstalk.com/recognize-tenant/domain_name',
+          {
+            domainName: 'andrew.systemha.com'
+          }
+        )
+        //console.log('Get Successfully:', response.data.result.tenant_id) 
+
+        cookies.set('talent_id', response.data.result.tenant_id);
+        //console.log(cookies.get('talent_id')); 
+
+        axios.create({
+          baseURL: 'https://api.systemha.com/',
+          timeout: 1000,
+          headers: {
+            "autorization": `Bearer${cookies.get('tenantid')}=`
+          }
+        })
+      } catch (error) {
+        console.error('Errorrr :', error)
+      }
+    }
+
+    getTalentID()
+
+  },[])
+
+
+
+
   return (
     <div>
       <Provider store={store}>
